@@ -40,6 +40,7 @@ class Contenedor {
             data_to_save.id = file_content.length === 0 ? 1 : file_content[ file_content.length -1 ].id + 1
             file_content.push( data_to_save );
             await writeFile(this.fileName, JSON.stringify( file_content, null, 4 ) , {encoding:'utf-8'})
+            return data_to_save.id
         }
         catch (error) {
             console.log(error);
@@ -55,7 +56,6 @@ class Contenedor {
             let file_content = JSON.parse(file_content_raw);
             let response = file_content.find( item => item.id === id );
             response = response === undefined ? response = null : response;
-            console.log( '--> respuesta de getById()', response );
             return response;
         }
         catch (error) {
@@ -69,7 +69,6 @@ class Contenedor {
         try {
             let file_content_raw = await readFile(this.fileName, {encoding:'utf-8'});
             let file_content = JSON.parse(file_content_raw);
-            console.log( '--> respuesta de getAll()', file_content );
             return file_content;
         }
         catch (error) {
@@ -86,10 +85,9 @@ class Contenedor {
             let file_content = JSON.parse(file_content_raw);
             let index = file_content.findIndex( item => item.id === id );
             if(index !== -1) {
-                file_content.splice(index,1); console.log(index)
+                file_content.splice(index,1);
                 await writeFile(this.fileName, JSON.stringify( file_content, null, 4 ) , {encoding:'utf-8'})
             }
-            console.log( '--> respuesta de deleteById()', file_content );
         }
         catch (error) {
             console.log(error);
@@ -110,30 +108,44 @@ class Contenedor {
 
 }
 
-console.log('--> creamos un contenedor llamado "productos.txt"');
-ejemplo_contenedor = new Contenedor('productos.txt');
+const runTests = async () => {
 
-// console.log('--> intentamos guardar un tipo de dato que no sea "object"');
-// ejemplo_contenedor.save( 'data de tipo strign' )
+    console.log('--> creamos un contenedor llamado "productos.json"');
+    ejemplo_contenedor = new Contenedor('productos.json');
 
-console.log('--> creamos datos de prueba');
-let product_1 = new Producto('Producto de prueba 001',1001,'https://dummyimage.com/200x200/000000/fff.jpg&text=1');
-ejemplo_contenedor.save(product_1);
+    console.log('\n--> intentamos guardar un tipo de dato que no sea "object"');
+    await ejemplo_contenedor.save( 'data de tipo strign' )
 
-// let product_2 = new Producto('Producto de prueba 002',2002,'https://dummyimage.com/200x200/000000/fff.jpg&text=2');
-// ejemplo_contenedor.save(product_2);
+    console.log('\n--> creamos 10 datos de prueba');
+    for (let index = 0; index < 10; index++) {
+        let product = new Producto(`Producto de prueba ${ index + 1000 }`,1001,'https://dummyimage.com/200x200/000000/fff.jpg&text=1');
+        console.log('--> id del nuevo elemento', await ejemplo_contenedor.save(product));
+    }
 
-// console.log('--> consultamos por el producto con id=2');
-// ejemplo_contenedor.getById(2);
+    console.log('\n--> consultamos por el producto con id=2');
+    let response = await ejemplo_contenedor.getById(2);
+    console.log( '--> respuesta de getById(2)', response );
+    
+    console.log('\n--> consultamos por el producto con id=2000 que no existe');
+    response = await ejemplo_contenedor.getById(2000);
+    console.log( '--> respuesta de getById(2000)', response );
 
-// console.log('--> consultamos por el producto con id=2000');
-// ejemplo_contenedor.getById(2000);
+    console.log('\n--> consultamos por todos los productos');
+    response = await ejemplo_contenedor.getAll();
+    console.log( '--> respuesta de getAll()', response );
 
-// console.log('--> consultamos por todos los productos');
-// ejemplo_contenedor.getAll();
+    console.log('\n--> eliminamos el producto con id=5');
+    await ejemplo_contenedor.deleteById(5);
+    console.log('--> consultamos por todos los productos donde se observa el id=5 eliminado');
+    response = await ejemplo_contenedor.getAll();
+    console.log( '--> respuesta de getAll()', response );
 
-// console.log('--> eliminamos el producto con id=5');
-// ejemplo_contenedor.deleteById(5);
+    console.log('\n--> eliminamos todo el contenido');
+    await ejemplo_contenedor.deleteAll();
+    console.log('--> consultamos por todos los productos donde se observa que se han eliminado todos los objetos');
+    response = await ejemplo_contenedor.getAll();
+    console.log( '--> respuesta de getAll()', response );
 
-// console.log('--> eliminamos todo el contenido');
-// ejemplo_contenedor.deleteAll();
+}
+
+runTests();
