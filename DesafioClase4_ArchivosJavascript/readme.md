@@ -2,6 +2,7 @@
 
 ## Ejecutar resolución
 - `cd DesafioClase4_ArchivosJavascript`
+- Comentar o descomentar el método que se desee probar.
 - `node index.js`
 
 ## Requerimientos
