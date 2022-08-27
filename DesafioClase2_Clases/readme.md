@@ -1,9 +1,8 @@
 # Desafío Clase 2: Clases
 
 ## Ejecutar resolución
-`cd DesafioClase2_Clases`
-
-`node index.js`
+- `cd DesafioClase2_Clases`
+- `node index.js`
 
 ## Requerimientos
 1) Declarar una clase `Usuario`.
