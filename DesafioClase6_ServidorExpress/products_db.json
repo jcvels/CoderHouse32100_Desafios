@@ -1,0 +1,122 @@
+[
+    {
+        "title": "Producto de prueba #15",
+        "price": 15,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=15",
+        "id": 1
+    },
+    {
+        "title": "Producto de prueba #73",
+        "price": 73,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=73",
+        "id": 2
+    },
+    {
+        "title": "Producto de prueba #14",
+        "price": 14,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=14",
+        "id": 3
+    },
+    {
+        "title": "Producto de prueba #34",
+        "price": 34,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=34",
+        "id": 4
+    },
+    {
+        "title": "Producto de prueba #74",
+        "price": 74,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=74",
+        "id": 5
+    },
+    {
+        "title": "Producto de prueba #20",
+        "price": 20,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=20",
+        "id": 6
+    },
+    {
+        "title": "Producto de prueba #86",
+        "price": 86,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=86",
+        "id": 7
+    },
+    {
+        "title": "Producto de prueba #99",
+        "price": 99,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=99",
+        "id": 8
+    },
+    {
+        "title": "Producto de prueba #73",
+        "price": 73,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=73",
+        "id": 9
+    },
+    {
+        "title": "Producto de prueba #87",
+        "price": 87,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=87",
+        "id": 10
+    },
+    {
+        "title": "Producto de prueba #88",
+        "price": 88,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=88",
+        "id": 11
+    },
+    {
+        "title": "Producto de prueba #23",
+        "price": 23,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=23",
+        "id": 12
+    },
+    {
+        "title": "Producto de prueba #95",
+        "price": 95,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=95",
+        "id": 13
+    },
+    {
+        "title": "Producto de prueba #63",
+        "price": 63,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=63",
+        "id": 14
+    },
+    {
+        "title": "Producto de prueba #45",
+        "price": 45,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=45",
+        "id": 15
+    },
+    {
+        "title": "Producto de prueba #86",
+        "price": 86,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=86",
+        "id": 16
+    },
+    {
+        "title": "Producto de prueba #21",
+        "price": 21,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=21",
+        "id": 17
+    },
+    {
+        "title": "Producto de prueba #12",
+        "price": 12,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=12",
+        "id": 18
+    },
+    {
+        "title": "Producto de prueba #42",
+        "price": 42,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=42",
+        "id": 19
+    },
+    {
+        "title": "Producto de prueba #24",
+        "price": 24,
+        "thumbnail": "https://dummyimage.com/200x200/000000/fff.jpg&text=24",
+        "id": 20
+    }
+]
