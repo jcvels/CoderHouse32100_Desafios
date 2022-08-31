@@ -2,7 +2,7 @@ const express = require('express');
 const { Contenedor, Producto } = require('./products');
 
 const products_db = new Contenedor('products_db.json');
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 const server = express();
 
