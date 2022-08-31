@@ -3,6 +3,8 @@
 ## Ejecutar resolución
 - `cd DesafioClase6_ServidorExpress`
 - `node index.js`
+- Abrir en el navegador `localhost:8080`.
+- Navegar a las rutas especificadas o utilizar el menú disponible en `localhost:8080`.
 
 ## Requerimientos
 - Realizar un proyecto de servidor basado en node.js que utilice el módulo express e implemente los siguientes endpoints en el puerto 8080:
