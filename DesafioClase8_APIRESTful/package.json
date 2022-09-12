@@ -1,0 +1,15 @@
+{
+  "name": "desafioclase8_apirestful",
+  "version": "1.0.0",
+  "description": "Desafio Clase 8: API RESTful",
+  "main": "server.js",
+  "scripts": {
+    "start-dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Jorge Pauvels",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
