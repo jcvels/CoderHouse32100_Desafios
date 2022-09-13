@@ -16,5 +16,11 @@
         "price": "000",
         "thumbnail": "https://www.ansilta.com/img/articulos/2022/01/campera_crux_imagen18.jpg",
         "id": 3
+    },
+    {
+        "title": "Producto agregado desde el formulario",
+        "price": "000",
+        "thumbnail": "https://www.ansilta.com/img/articulos/2022/01/campera_crux_imagen18.jpg",
+        "id": 4
     }
 ]

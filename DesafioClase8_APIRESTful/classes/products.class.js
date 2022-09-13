@@ -3,9 +3,10 @@ const { existsSync } = require('fs');
 
 class Producto {
 
-    constructor(title,price,thumbnail) {
+    constructor(title,price,thumbnail,id=-1) {
         this.title = title;
         this.price = price;
+        this.id = id;
         this.thumbnail = thumbnail;
     }
 
@@ -39,12 +40,33 @@ class Contenedor {
             data_to_save.id = file_content.length === 0 ? 1 : file_content[ file_content.length -1 ].id + 1
             file_content.push( data_to_save );
             await writeFile(this.fileName, JSON.stringify( file_content, null, 4 ) , {encoding:'utf-8'})
-            return data_to_save.id
+            return data_to_save
         }
         catch (error) {
             console.log(error);
         }
 
+    }
+
+    async updateById(id, data_to_save) {
+
+        try {
+            if( typeof data_to_save !== 'object' ) throw 'ERRROR: El elemento a guardar debe ser un objeto {...}';
+            if( typeof id !== 'number' ) throw 'ERRROR: El ID debe ser un numero.';
+            let file_content_raw = await readFile(this.fileName, {encoding:'utf-8'});
+            let file_content = JSON.parse(file_content_raw);
+            let item_to_modify_index = file_content.findIndex( item => item.id === id );
+
+            if( item_to_modify_index === -1 ) return false
+
+            file_content[item_to_modify_index] = data_to_save;
+            await writeFile(this.fileName, JSON.stringify( file_content, null, 4 ) , {encoding:'utf-8'})
+            return file_content[item_to_modify_index]
+        }
+        catch (error) {
+            console.log(error);
+        }
+ 
     }
 
     async getById(id) {
@@ -85,8 +107,10 @@ class Contenedor {
             let index = file_content.findIndex( item => item.id === id );
             if(index !== -1) {
                 file_content.splice(index,1);
-                await writeFile(this.fileName, JSON.stringify( file_content, null, 4 ) , {encoding:'utf-8'})
+                await writeFile(this.fileName, JSON.stringify( file_content, null, 4 ) , {encoding:'utf-8'});
+                return true;
             }
+            return false;
         }
         catch (error) {
             console.log(error);
