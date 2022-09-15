@@ -4,9 +4,9 @@
   "description": "Desafío Clase 10: Motores de plantillas",
   "main": "index.js",
   "scripts": {
-    "start-pug":"nodemon index.pug.js",
-    "start-ejs":"nodemon index.ejs.js",
-    "start-hbs":"nodemon index.hbs.js"
+    "start-pug":"nodemon index.js pug",
+    "start-ejs":"nodemon index.js ejs",
+    "start-hbs":"nodemon index.js hbs"
   },
   "author": "Jorge Pauvels",
   "license": "ISC",

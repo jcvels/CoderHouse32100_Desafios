@@ -2,7 +2,11 @@
 
 ## Ejecutar resolución
 - `cd DesafioClase10_MotoresPlantillas`
-- `node index.js`
+- Ejecute el comando correspondiente para el Template Engine deseado:
+    - Handelbars: `npm run start-hbs`.
+    - PUG: `npm run start-pug`.
+    - EJS: `npm run start-ejs`.
+- Acceder a [http://localhost:8080](http://localhost:8080)
 
 ## Requerimientos 
 1) Utilizando la misma API de productos del proyecto entregable de la clase anterior, construir un web server (no REST) que incorpore:
