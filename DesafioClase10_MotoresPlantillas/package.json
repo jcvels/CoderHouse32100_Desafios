@@ -1,0 +1,22 @@
+{
+  "name": "desafioclase10_motoresplantillas",
+  "version": "1.0.0",
+  "description": "Desafío Clase 10: Motores de plantillas",
+  "main": "index.js",
+  "scripts": {
+    "start-pug":"nodemon index.pug.js",
+    "start-ejs":"nodemon index.ejs.js",
+    "start-hbs":"nodemon index.hbs.js"
+  },
+  "author": "Jorge Pauvels",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "handlebars": "^4.7.7",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
