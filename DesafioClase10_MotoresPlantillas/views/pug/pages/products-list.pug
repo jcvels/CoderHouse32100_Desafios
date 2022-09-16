@@ -1,0 +1,22 @@
+extend ../layouts/layout
+
+block body
+    h2.mt-5.mb-3 Listado de productos
+    if products.length > 0
+        table.table.table-hover
+            thead
+                tr
+                    th ID
+                    th Producto
+                    th Fotografia
+                    th Precio
+            tbody
+            each product in products
+                tr
+                    th #{product.id}
+                    td #{product.title}
+                    td
+                        img(src=product.thumbnail width="70px").img-fluid
+                    td $ #{product.price}
+    else 
+        div.alert.alert-danger.text-center.my-5.p-3 No hay productos disponibles

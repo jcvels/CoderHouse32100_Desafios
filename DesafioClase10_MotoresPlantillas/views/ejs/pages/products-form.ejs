@@ -1,0 +1,25 @@
+<%- include('../partials/head.ejs') %>
+<%- include('../partials/navbar.ejs') %>
+
+<div class="container">
+    <form action="/productos" method="post">
+        <h2 class="mt-5 mb-3">Carga de nuevo producto</h2>
+        <div class="mb-3">
+            <label class="form-label" for="title">Nombre del producto</label>
+            <input class="form-control" id="title" type="text" name="title" placeholder="Campera de cuero negra">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="price">Precio</label>
+            <input class="form-control" id="price" type="number" min="0" name="price" placeholder="1234">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="thumbnail">URL a foto de referencia</label>
+            <input class="form-control" id="thumbnail" type="text" name="thumbnail" placeholder="http://my-picture-server/picture.jpg">
+        </div><div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Cargar">
+            <input class="ms-2 btn btn-secondary" type="reset" value="Limpiar">
+        </div>
+    </form>
+</div>
+
+<%- include('../partials/footer.ejs') %>

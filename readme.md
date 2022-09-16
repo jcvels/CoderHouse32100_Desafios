@@ -6,3 +6,4 @@ Resolución de los ejercicios de la comisión #32100 del curso Programación Bac
 - [Desafío Clase 4: Manejo de Archivos en Javascript](./DesafioClase4_ArchivosJavascript)
 - [Desafío Clase 6: Servidor con Express](./DesafioClase6_ServidorExpress)
 - [Desafío Clase 8: API RESTful](./DesafioClase8_APIRESTful)
+- [Desafío Clase 10: Motores de plantillas](./DesafioClase10_MotoresPlantillas)
