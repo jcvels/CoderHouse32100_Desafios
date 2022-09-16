@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const { engine } = require('express-handlebars');
 const productsRouter = require('./routes/product.route');
 
 const port = process.env.PORT || 8080;
@@ -20,6 +21,13 @@ if( process.argv[2] === 'ejs' ) {
 
 if( process.argv[2] === 'hbs' ) {
     console.log('--> using HANDELBARS template engine');
+    server.engine("hbs", engine({
+        extname: ".hbs",
+        defaultLayout: "layout.hbs",
+        layoutsDir: path.join( __dirname, './views/hbs/layouts'),
+        partialsDir: path.join( __dirname, './views/hbs/partials')
+    }))
+    server.set('view engine', 'hbs')
 }
 
 server.set('views', path.join(__dirname, './views'))
