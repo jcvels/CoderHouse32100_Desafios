@@ -2,8 +2,8 @@
 
 ## Ejecutar resolución
 - `cd DesafioClase10_MotoresPlantillas`
-- Ejecute el comando correspondiente para el Template Engine deseado:
-    - Handelbars: `npm run start-hbs`.
+- Ejecutar el comando correspondiente para el Template Engine deseado:
+    - Handlebars: `npm run start-hbs`.
     - PUG: `npm run start-pug`.
     - EJS: `npm run start-ejs`.
 - Acceder a [http://localhost:8080](http://localhost:8080)
@@ -25,4 +25,4 @@
 - Utilizar iconfinder [https://www.iconfinder.com/free_icons](https://www.iconfinder.com/free_icons) para obtener la url de las imágenes de los productos (click derecho sobre la imagen -> copiar dirección de la imagen).
 
 ## Opcional
-- Utilizar bootstrap para maquetar la vista creada por dicho motor de plantillas y el formulario de ingreso de productos.
+- Utilizar bootstrap para maquetar la vista creada por dicho motor de plantillas y el formulario de ingreso de productos. 
