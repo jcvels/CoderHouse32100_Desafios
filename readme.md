@@ -7,3 +7,4 @@ Resolución de los ejercicios de la comisión #32100 del curso Programación Bac
 - [Desafío Clase 6: Servidor con Express](./DesafioClase6_ServidorExpress)
 - [Desafío Clase 8: API RESTful](./DesafioClase8_APIRESTful)
 - [Desafío Clase 10: Motores de plantillas](./DesafioClase10_MotoresPlantillas)
+- [Desafío Clase 12: Websockets](./DesafioClase12_Websockets)
