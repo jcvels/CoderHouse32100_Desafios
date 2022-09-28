@@ -7,7 +7,7 @@ Modificar el último entregable para que disponga de un canal de websocket que p
 Cuando un cliente se conecte, recibirá la lista de productos a representar en la vista.
 
 ## Aspectos a incluir en el entregable
-Para construir la tabla dinámica con los datos recibidos por websocket utilizar Handlebars en el frontend. Considerar usar archivos públicos para alojar la plantilla vacía, y obtenerla usando la función fetch( ). Recordar que fetch devuelve una promesa.
+Para construir la tabla dinámica con los datos recibidos por websocket utilizar Handlebars en el frontend. Considerar usar archivos públicos para alojar la plantilla vacía, y obtenerla usando la función fetch( ). Recordar que fetch devuelve una promesa. --> OK
 
 ## Consigna 2
 Añadiremos al proyecto un canal de chat entre los clientes y el servidor.

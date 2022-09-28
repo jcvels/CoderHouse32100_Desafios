@@ -9,6 +9,7 @@ html(lang="es")
         title Desafío Clase 12: Websockets
     body
         include ../partials/navbar.pug
-        .container 
+        .container
             block body
-        script(src='http://localhost:8080/ws-client.js')
+        script(src="socket.io/socket.io.js")
+        script(src='/ws-client.js')

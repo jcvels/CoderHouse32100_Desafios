@@ -1,14 +1,16 @@
-form#product-form
-    h2.mb-3 Carga de nuevo producto
-    .mb-3
-        label.form-label(for='title') Nombre del producto
-        input#title.form-control(type='text' name='title' placeholder='Campera de cuero negra')
-    .mb-3
-        label.form-label(for='price') Precio
-        input#price.form-control(type='number' min='0' name='price' placeholder='1234')
-    .mb-3
-        label.form-label(for='thumbnail') URL a foto de referencia
-        input#thumbnail.form-control(type='text' name='thumbnail' placeholder='http://my-picture-server/picture.jpg')
-    .mb-3
-        input.btn.btn-primary(type='submit' value='Cargar')
-        input.ms-2.btn.btn-secondary(type='reset' value='Limpiar')
+section.mt-5
+    form#product-form
+        h2.mb-3 Carga de producto
+        .row.mb-3
+            .col-4
+                label.form-label(for='title') Nombre del producto
+                input#title.form-control(type='text' name='title' placeholder='Campera de cuero negra' required)
+            .col-2
+                label.form-label(for='price') Precio
+                input#price.form-control(type='number' min='0' name='price' placeholder='1234' required)
+            .col-6
+                label.form-label(for='thumbnail') URL a foto de referencia
+                input#thumbnail.form-control(type='text' name='thumbnail' placeholder='http://my-picture-server/picture.jpg' required)
+        .mb-3
+            input.btn.btn-primary.btn-sm(type='submit' value='Cargar')
+            input.ms-2.btn.btn-secondary.btn-sm(type='reset' value='Limpiar')

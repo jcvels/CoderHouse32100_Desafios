@@ -1,12 +1,13 @@
-h2.mb-3 Chat
-#chat-messages.mb-3.form-control(heigth="500px")
-    p
-        span.text-danger Jorge:
-        span.ms-1 Hola como estan?
-form#chat-form
-    .row.mb-3
-        .col-8
-            input#new-message.form-control(type='text' name='new-message' placeholder='Type your message...')
-        .col-4
-            input.btn.btn-primary(type='submit' value='Enviar')
-            input.ms-2.btn.btn-secondary(type='reset' value='Limpiar')
+section.mt-5
+    h2.mb-3 Chat
+    #chat-messages.mb-3.form-control(heigth="500px")
+        p
+            span.text-danger Jorge:
+            span.ms-1 Hola como estan?
+    form#chat-form
+        .row.mb-3
+            .col-8
+                input#new-message.form-control(type='text' name='new-message' placeholder='Type your message...')
+            .col-4
+                input.btn.btn-primary.btn-sm(type='submit' value='Enviar')
+                input.ms-2.btn.btn-secondary.btn-sm(type='reset' value='Limpiar')

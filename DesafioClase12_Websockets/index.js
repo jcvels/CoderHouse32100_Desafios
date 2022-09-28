@@ -1,20 +1,27 @@
 const express = require('express');
+const { Server: HttpServer } = require('http');
+const { Server: SocketServer } = require('socket.io');
 const path = require('path');
+const { wsConnection } = require('./controllers/ws.controller')
 const productsRouter = require('./routes/product.route');
 
 const port = process.env.PORT || 8080;
-const server = express();
+const app = express();
+const httpServer = new HttpServer(app);
+const io = new SocketServer(httpServer);
 
-server.use(express.json());
-server.use(express.urlencoded({extended:true}))
+app.use(express.json());
+app.use(express.urlencoded({extended:true}))
 
-server.set('view engine','pug');
-server.set('views', path.join(__dirname, './views'))
+app.set('view engine','pug');
+app.set('views', path.join(__dirname, './views'))
 
-server.use('/', express.static('public'));
-server.use('/', productsRouter);
+app.use('/', express.static('public'));
+app.use('/', productsRouter);
 
-server.listen(port)
+httpServer.listen(port)
     .on('listening', () => console.log(`--> listening port ${port}`) )
     .on('request', (data) => console.log(`--> ${data.method} --> ${data.url}` ) )
     .on('error', (err) => console.log(`--> ${err}`) )
+
+io.on('connection', socket => wsConnection(socket, io) )
