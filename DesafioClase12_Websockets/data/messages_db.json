@@ -1,0 +1,26 @@
+[
+    {
+        "mail": "cliente@demo.com",
+        "text": "Hola! Por favor, indicarme si el Apple Watch 3 es de 38 o 42 milímetros.",
+        "timestamp": "03/08/2022 18:46:02",
+        "id": 1
+    },
+    {
+        "mail": "admin@tienda.com",
+        "text": "Hola, el modelo que tenemos en stock es de 38mm. Sin embargo la próxima semana, también tendremos stock en 42mm. ",
+        "timestamp": "03/08/2022 18:47:39",
+        "id": 2
+    },
+    {
+        "mail": "cliente@demo.com",
+        "text": "Genial! Entonces, vuelvo a consultar la próxima semana! Muchas gracias!",
+        "timestamp": "03/08/2022 18:48:23",
+        "id": 3
+    },
+    {
+        "mail": "admin@tienda.com",
+        "text": "Te esperamos! Saludos",
+        "timestamp": "03/08/2022 18:48:44",
+        "id": 4
+    }
+]

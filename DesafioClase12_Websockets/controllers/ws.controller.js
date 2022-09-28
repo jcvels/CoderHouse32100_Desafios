@@ -1,12 +1,18 @@
-const { Contenedor } = require('../classes/products.class');
+const { Contenedor } = require('../classes/conteiner.class');
 
 const products_db = new Contenedor('./data/products_db.json');
+const messages_db = new Contenedor('./data/messages_db.json');
 
 const wsConnection = (socket, io) => {
-    console.log(`--> new ws connection with id ${socket.id}`)
+
+    console.log(`--> NEW WS connection with id ${socket.id}`)
     
     products_db.getAll()
         .then( products => socket.emit('products-update', {products}) )
+        .catch( error => console.error(error) )
+
+    messages_db.getAll()
+        .then( messages => socket.emit('messages-update', {messages}) )
         .catch( error => console.error(error) )
         
     socket.on("new-product", (data) => {
@@ -27,6 +33,16 @@ const wsConnection = (socket, io) => {
                     .catch( error => console.error(error) )
             } )
             .catch( error => console.error(error) )        
+    })
+
+    socket.on("new-message", (data) => {
+        messages_db.save(data)
+            .then( data => {
+                messages_db.getAll()
+                    .then( messages => io.emit('messages-update', {messages}) )
+                    .catch( error => console.error(error) )
+            } )
+            .catch( error => console.error(error) )
     })
     
 }

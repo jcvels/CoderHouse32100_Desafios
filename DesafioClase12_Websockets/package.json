@@ -17,6 +17,6 @@
     "nodemon": "^2.0.19"
   },
   "nodemonConfig": {
-    "ignore": ["products_db.json"]
+    "ignore": ["products_db.json","messages_db.json"]
   }
 }

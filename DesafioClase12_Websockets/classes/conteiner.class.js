@@ -1,17 +1,6 @@
 const { writeFile, readFile } = require('fs/promises');
 const { existsSync } = require('fs');
 
-class Producto {
-
-    constructor(title,price,thumbnail,id=-1) {
-        this.title = title;
-        this.price = price;
-        this.id = id;
-        this.thumbnail = thumbnail;
-    }
-
-}
-
 class Contenedor {
 
     constructor(fileName) {
@@ -132,6 +121,5 @@ class Contenedor {
 }
 
 module.exports = {
-    Contenedor,
-    Producto
+    Contenedor
 };
