@@ -1,0 +1,22 @@
+{
+  "name": "desafioclase12_websockets",
+  "version": "1.0.0",
+  "description": "Desafío Clase 10: Websockets",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Jorge Pauvels",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pug": "^3.0.2",
+    "socket.io": "^4.5.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "nodemonConfig": {
+    "ignore": ["products_db.json","messages_db.json"]
+  }
+}
