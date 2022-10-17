@@ -1,5 +1,4 @@
-module.exports = {
-  development: {
+const products_data = {
     client:'mysql',
     connection:{
         host : 'uvcs01.uvcoding.com.ar',
@@ -9,7 +8,22 @@ module.exports = {
         database : 'backendCoderDesafio16'
     },
     migrations: {
-      directory: 'src/db/migrations'
+        directory: 'src/db/migrations-mariadb'
     }
-  }
-};
+}
+
+const messages_data = {
+    client: 'sqlite3',
+    connection: {
+      filename: 'src/db/backendCoderDesafio16.sqlite'
+    },
+    useNullAsDefault: true,
+    migrations: {
+        directory: 'src/db/migrations-sqlite'
+    }
+}
+
+module.exports = {
+    products_data,
+    messages_data
+}

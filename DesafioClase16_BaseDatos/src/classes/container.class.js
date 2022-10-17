@@ -1,8 +1,10 @@
+const knex = require('knex')
+
 class Container {
     
     constructor(knex_config, table_name) {
         this.table_name = table_name
-        this.database = require('knex')(knex_config)
+        this.database = knex(knex_config)
         this.initDB()
     }
 

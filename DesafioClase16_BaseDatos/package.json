@@ -6,9 +6,9 @@
   "scripts": {
     "test": "nodemon .",
     "start": "node .",
-    "knex-up": "knex migrate:up",
-    "knex-down": "knex migrate:rollback",
-    "knex-list": "knex migrate:list"
+    "knex-up": "knex migrate:up --env products_data && knex migrate:up --env messages_data",
+    "knex-down": "knex migrate:rollback --env products_data && knex migrate:rollback --env messages_data",
+    "knex-list": "knex migrate:list --env products_data && knex migrate:list --env messages_data"
   },
   "author": "Jorge Pauvels <jcvels@uvcoding.com.ar>",
   "license": "ISC",
