@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Apple Mac Mini M1",
+        "price": "1200",
+        "thumbnail": "https://cdn4.iconfinder.com/data/icons/iconize-apple-devices-freebies/128/apple-07-256.png",
+        "id": 1
+    },
+    {
+        "title": "Apple Macbook Pro M1",
+        "price": "1500",
+        "id": 2,
+        "thumbnail": "https://cdn4.iconfinder.com/data/icons/iconize-apple-devices-freebies/128/apple-08-256.png"
+    },
+    {
+        "title": "Apple Watch 3",
+        "price": "560",
+        "id": 3,
+        "thumbnail": "https://cdn4.iconfinder.com/data/icons/iconize-apple-devices-freebies/128/apple-04-256.png"
+    },
+    {
+        "title": "Apple TV",
+        "price": "900",
+        "id": 4,
+        "thumbnail": "https://cdn4.iconfinder.com/data/icons/iconize-apple-devices-freebies/128/apple-03-256.png"
+    },
+    {
+        "title": "Apple iMac 24\" M1",
+        "price": "1700",
+        "id": 5,
+        "thumbnail": "https://cdn4.iconfinder.com/data/icons/iconize-apple-devices-freebies/128/apple-01-256.png"
+    }
+]
