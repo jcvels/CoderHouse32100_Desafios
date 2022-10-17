@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const { Server: HttpServer } = require('http');
 const { Server: SocketServer } = require('socket.io');
@@ -9,6 +11,7 @@ const port = process.env.PORT || 8080;
 const app = express();
 const httpServer = new HttpServer(app);
 const io = new SocketServer(httpServer);
+
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))

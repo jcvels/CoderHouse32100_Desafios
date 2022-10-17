@@ -1,11 +1,11 @@
 const products_data = {
     client:'mysql',
     connection:{
-        host : 'uvcs01.uvcoding.com.ar',
-        port : 3306,
-        user : 'coderchallengesuser',
-        password : 'dd6487010b1442c5099e54f42693200f',
-        database : 'backendCoderDesafio16'
+        host : process.env.db_mariadb_host,
+        port : process.env.db_mariadb_port,
+        user : process.env.db_mariadb_user,
+        password : process.env.db_mariadb_password,
+        database : process.env.db_mariadb_database,
     },
     migrations: {
         directory: 'src/db/migrations-mariadb'
@@ -15,7 +15,7 @@ const products_data = {
 const messages_data = {
     client: 'sqlite3',
     connection: {
-      filename: 'src/db/backendCoderDesafio16.sqlite'
+      filename: process.env.db_sqlite_filename
     },
     useNullAsDefault: true,
     migrations: {
