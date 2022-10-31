@@ -9,3 +9,4 @@ Resolución de los ejercicios de la comisión #32100 del curso Programación Bac
 - [Desafío Clase 10: Motores de plantillas](./DesafioClase10_MotoresPlantillas)
 - [Desafío Clase 12: Websockets](./DesafioClase12_Websockets)
 - [Desafío Clase 16: Nuestra Primera Base de Datos](./DesafioClase16_BasseDatos)
+- [Desafío Clase 18: MongoDB](./DesafioClase18_MongoDB)
