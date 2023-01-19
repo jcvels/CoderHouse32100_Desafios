@@ -1,3 +1,9 @@
+# Desafío Clase 18: MongoDB
+
+## Resolución
+
+[Ver resolución](.\comandos_mongodb.md)
+
 ## Consigna
 Utilizando Mongo Shell, crear una base de datos llamada ecommerce que contenga dos colecciones: mensajes y productos.
 1) Agregar 10 documentos con valores distintos a las colecciones mensajes y productos. El formato de los documentos debe estar en correspondencia con el que venimos utilizando en el entregable con base de datos MariaDB. 

@@ -10,3 +10,7 @@ Resolución de los ejercicios de la comisión #32100 del curso Programación Bac
 - [Desafío Clase 12: Websockets](./DesafioClase12_Websockets)
 - [Desafío Clase 16: Nuestra Primera Base de Datos](./DesafioClase16_BasseDatos)
 - [Desafío Clase 18: MongoDB](./DesafioClase18_MongoDB)
+- [Desafío Clase 22: Mocks y normalización](./DesafioClase22_MocksNormalización)
+- [Desafío Clase 24: Log-In por formulario](./DesafioClase24_LogInPorFormulario)
+- [Desafío Clase 26: Inicio de Sesión](./DesafioClase26_InicioSesión)
+- [Desafío Clase 28: Usando el Objeto Process](./DesafioClase28_UsandoObjetoProcess)
